@@ -29,7 +29,7 @@
                     background-color: #182B45;
                 }
             </style>
-            <span class="brand-text font-weight-light" style="margin-left: 68px">Praktikum4People</span>
+            <span class="brand-text font-weight-light" style="margin-left: 40px">Praktikum4People</span>
         </a>
         <div class="sidebar" style="background-color: #182B45">
             <nav class="mt-2">
@@ -37,7 +37,7 @@
 
                     {{-- start  --}}
                        <li class="nav-item">
-                        <a href="#!" class="nav-link">
+                        <a href="{{ route('slider.index') }}" class="nav-link">
                         <i class="nav-icon"></i>
                         <p>
                             Sliders
