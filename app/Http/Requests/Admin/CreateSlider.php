@@ -11,7 +11,7 @@ class CreateSlider extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -24,7 +24,7 @@ class CreateSlider extends FormRequest
     public function rules(): array
     {
         return [
-            'image' => 'required|image|mimes"jpeg,jpg,png,webp'
+            'image' => 'required|image|mimes:png,jpg,jpeg,wepb',
         ];
     }
 }

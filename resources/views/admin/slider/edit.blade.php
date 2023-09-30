@@ -9,14 +9,15 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-title-box">
-                        <h4 class="page-title">Add</h4>
+                        <h4 class="page-title">Edit</h4>
                     </div>
                 </div>
                 <div class="clearfix"></div>
             </div>
 
-            <form action="{{ route('slider.store') }}" enctype="multipart/form-data" method="POST">
+            <form action="{{ route('slider.update', $slider->id) }}" enctype="multipart/form-data" method="POST">
                 @csrf
+                @method('PUT')
                 <div class="card">
                     <div class="card-body">
 
@@ -33,11 +34,12 @@
                                     </div>
                                 @endif
                             </div>
+                            
                         </div>
                         <br>
                         <div class="row" style="margin-top: 15px">
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-success btn-block">Save</button>
+                                <button type="submit" class="btn btn-success btn-block">Update</button>
                             </div>
                         </div>
                     </div>

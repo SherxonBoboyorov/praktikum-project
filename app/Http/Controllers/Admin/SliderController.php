@@ -19,7 +19,9 @@ class SliderController extends Controller
     public function index()
     {
         $sliders = Slider::orderBy('id')->get();
-        return view('admin.slider.index', compact('sliders'));
+        return view('admin.slider.index', compact (
+           'sliders'
+        ));
     }
 
     /**
@@ -42,12 +44,16 @@ class SliderController extends Controller
     {
         $data = $request->all();
 
-        $data['image'] = Slider::uploadImage($data);
+        $data['image'] = Slider::uploadImage($request);
 
         if(Slider::create($data)){
-            return redirect()->route('admin.slider')->with("message", 'Created successfully!!');
+            return redirect()
+                   ->route('slider.index')
+                   ->with("message", 'Created successfully!!');
         }
-        return redirect()->route('admin.slider')->with("message", 'Failed to add successfully!!');
+        return redirect()
+               ->route('slider.index')
+               ->with("message", 'Failed to add successfully!!');
         
     }
 
@@ -71,7 +77,9 @@ class SliderController extends Controller
     public function edit($id)
     {
         $slider = Slider::find($id);
-        return view('admin.slider.edit', compact('slider'));
+        return view('admin.slider.edit', compact(
+           'slider'
+        ));
     }
 
     /**
@@ -85,16 +93,19 @@ class SliderController extends Controller
     {
         $slider = Slider::find($id);
 
-
         $data = $request->all();
 
         $data['image'] = Slider::updateImage($request, $slider);
 
         if ($slider->update($data)) {
-            return redirect()->route('slider.index')->with('message', 'updated successfully!!!');
+            return redirect()
+                  ->route('slider.index')
+                  ->with('message', 'updated successfully!!!');
         }
 
-        return redirect()->route('slider.index')->with('message', 'failed to update successfully');
+        return redirect()
+               ->route('slider.index')
+               ->with('message', 'failed to update successfully');
     }
 
     /**
@@ -112,9 +123,13 @@ class SliderController extends Controller
         }
 
         if ($slider->delete()) {
-            return redirect()->route('slider.index')->with('message', "deleted successfully!!!");
+            return redirect()
+                   ->route('slider.index')
+                   ->with('message', "deleted successfully!!!");
         }
 
-        return redirect()->route('slider.index')->with('message', "failed to delete successfully");
+        return redirect()
+                ->route('slider.index')
+                ->with('message', "failed to delete successfully");
     }
 }
