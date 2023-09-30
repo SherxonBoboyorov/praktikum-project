@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\CreateSlider;
-use App\Http\Requests\Admin\UpdateSlider;
-use App\Models\Slider;
+use App\Http\Requests\Admin\CreateArticle;
+use App\Http\Requests\Admin\UpdateArticle;
+use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-class SliderController extends Controller
+class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +18,9 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $sliders = Slider::orderBy('id')->get();
-        return view('admin.slider.index', compact (
-           'sliders'
+        $articles = Article::orderBy('id')->paginate(12);
+        return view('admin.article.index', compact(
+            'articles'
         ));
     }
 
@@ -31,30 +31,30 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return view('admin.slider.create');
+        return view('admin.article.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  App\Http\Requests\Admin\CreateSlider  $request
+     * @param  App\Http\Requests\Admin\CreateArticle  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateSlider $request)
+    public function store(CreateArticle $request)
     {
         $data = $request->all();
 
-        $data['image'] = Slider::uploadImage($request);
+        $data['image'] = Article::uploadImage($request);
 
-        if(Slider::create($data)){
-            return redirect()
-                   ->route('slider.index')
-                   ->with("message", 'Created successfully!');
+        if(Article::create($data)) {
+             return redirect()
+                   ->route('article.index')
+                   ->with("message", "Created successfullly!");
         }
+
         return redirect()
-               ->route('slider.index')
-               ->with("message", 'Failed to add successfully!');
-        
+               ->route('article.index')
+               ->with("message", "Failed to add successfully!");
     }
 
     /**
@@ -76,36 +76,39 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
-        $slider = Slider::find($id);
-        return view('admin.slider.edit', compact(
-           'slider'
+        $article = Article::find($id);
+        return view('admin.article.edit', compact(
+            'article'
         ));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  App\Http\Requests\Admin\UpdateSlider  $request
+     * @param  App\Http\Requests\Admin\UpdateArticle $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSlider $request, $id)
+    public function update(UpdateArticle $request, $id)
     {
-        $slider = Slider::find($id);
+        $article = Article::find($id);
 
         $data = $request->all();
 
-        $data['image'] = Slider::updateImage($request, $slider);
+        $data['image'] = Article::updateImage($request, $data);
 
-        if ($slider->update($data)) {
+        if($article->update($data)) 
+        {
             return redirect()
-                  ->route('slider.index')
-                  ->with('message', 'updated successfully!');
+                   ->route('article.index')
+                   ->with("message", "Updated successfully!");
         }
 
         return redirect()
-               ->route('slider.index')
-               ->with('message', 'failed to update successfully!');
+               ->route('article.index')
+               ->with("message", "Failed to updated successfully!");
+
+
     }
 
     /**
@@ -116,20 +119,20 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        $slider = Slider::find($id);
+        $article = Article::find($id);
 
-        if (File::exists(public_path() . $slider->image)) {
-            File::delete(public_path() . $slider->image);
+        if (File::exists(public_path() . $article->image)) {
+            File::delete(public_path() . $article->image);
         }
 
-        if ($slider->delete()) {
+        if ($article->delete()) {
             return redirect()
-                   ->route('slider.index')
+                   ->route('article.index')
                    ->with('message', "deleted successfully!");
         }
 
         return redirect()
-                ->route('slider.index')
+                ->route('article.index')
                 ->with('message', "failed to delete successfully!");
     }
 }
