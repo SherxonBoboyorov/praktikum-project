@@ -39,7 +39,7 @@
                     {{-- start  --}}
                        <li class="nav-item">
                         <a href="{{ route('slider.index') }}" class="nav-link">
-                        <i class="nav-icon"></i>
+                        <i class="nav-icon fas fa-sliders-h"></i>
                         <p>
                             Sliders
                         </p>
@@ -62,7 +62,7 @@
 
                      <li class="nav-item">
                         <a href="{{ route('faq.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-faqs"></i>
+                        <i class="nav-icon fas fa-question-circle"></i>
                         <p>
                             FAQ
                         </p>

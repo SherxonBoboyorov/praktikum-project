@@ -95,7 +95,7 @@ class ArticleController extends Controller
 
         $data = $request->all();
 
-        $data['image'] = Article::updateImage($request, $data);
+        $data['image'] = Article::updateImage($request, $article);
 
         if($article->update($data)) 
         {
