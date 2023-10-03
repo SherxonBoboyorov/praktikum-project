@@ -80,6 +80,17 @@
                       </li>
                     {{-- end --}}
 
+                      {{-- start --}}
+                      <li class="nav-item">
+                        <a href="{{ route('applicant.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-user-edit"></i>
+                        <p>
+                            For Applicants
+                        </p>
+                        </a>
+                      </li>
+                    {{-- end --}}
+
                 </ul>
             </nav>
         </div>

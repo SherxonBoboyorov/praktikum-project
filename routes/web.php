@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ApplicantController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\EmployerController;
 use App\Http\Controllers\Admin\FaqController;
@@ -22,7 +23,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'slider' => SliderController::class,
         'article' => ArticleController::class,
         'faq' => FaqController::class,
-        'employer' => EmployerController::class
+        'employer' => EmployerController::class,
+        'applicant' => ApplicantController::class
     ]);
 });
 
