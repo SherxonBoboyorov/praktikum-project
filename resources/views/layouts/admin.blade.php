@@ -59,7 +59,6 @@
                     {{-- end --}}
 
                      {{-- start --}}
-
                      <li class="nav-item">
                         <a href="{{ route('faq.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-question-circle"></i>
@@ -68,7 +67,17 @@
                         </p>
                         </a>
                       </li>
+                    {{-- end --}}
 
+                     {{-- start --}}
+                     <li class="nav-item">
+                        <a href="{{ route('employer.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            For Employers
+                        </p>
+                        </a>
+                      </li>
                     {{-- end --}}
 
                 </ul>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\EmployerController;
 use App\Http\Controllers\Admin\FaqController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -20,7 +21,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
     Route::resources([
         'slider' => SliderController::class,
         'article' => ArticleController::class,
-        'faq' => FaqController::class
+        'faq' => FaqController::class,
+        'employer' => EmployerController::class
     ]);
 });
 

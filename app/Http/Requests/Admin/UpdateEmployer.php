@@ -11,9 +11,9 @@ class UpdateEmployer extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,11 @@ class UpdateEmployer extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            //
+            'title_de' => 'required|string|max:255',
+            'title_en' => 'required|string|max:255',
         ];
     }
 }
