@@ -91,6 +91,17 @@
                       </li>
                     {{-- end --}}
 
+                        {{-- start --}}
+                        <li class="nav-item">
+                            <a href="{{ route('page.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-building"></i>
+                            <p>
+                                About
+                            </p>
+                            </a>
+                          </li>
+                        {{-- end --}}
+
                 </ul>
             </nav>
         </div>
