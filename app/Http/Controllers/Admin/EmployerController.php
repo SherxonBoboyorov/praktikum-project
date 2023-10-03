@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\CreateArticle;
-use App\Http\Requests\Admin\UpdateArticle;
-use App\Models\Article;
+use App\Http\Requests\Admin\CreateEmployer;
+use App\Http\Requests\Admin\UpdateEmployer;
+use App\Models\Employer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
-class ArticleController extends Controller
+class EmployerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +19,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('id')->paginate(12);
-        return view('admin.article.index', compact(
-            'articles'
+        $employers = Employer::orderBy('id')->paginate(12);
+        return view('admin.employer.index', compact(
+            'employers'
         ));
     }
 
@@ -31,29 +32,30 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('admin.article.create');
+        return view('admin.employer.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  App\Http\Requests\Admin\CreateArticle  $request
+     * @param  App\Http\Requests\Admin\CreateEmployer  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateArticle $request)
+    public function store(CreateEmployer $request)
     {
         $data = $request->all();
 
-        $data['image'] = Article::uploadImage($request);
+        $data['image'] = Employer::uploadImage($request);
+        $data['slug_de'] = Str::slug($request->title_de, '-', 'de');
+        $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
 
-        if(Article::create($data)) {
-             return redirect()
-                   ->route('article.index')
-                   ->with("message", "Created successfullly!");
+        if(Employer::create($data)) {
+            return redirect()
+                   ->route('employer.index')
+                   ->with("message", 'Created successfully!');
         }
-
         return redirect()
-               ->route('article.index')
+               ->route('employer.index')
                ->with("message", "Failed to add successfully!");
     }
 
@@ -76,35 +78,38 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        $article = Article::find($id);
-        return view('admin.article.edit', compact(
-            'article'
+        $employer = Employer::find($id);
+        return view('admin.employer.edit', compact(
+            'employer'
         ));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  App\Http\Requests\Admin\UpdateArticle $request
+     * @param  App\Http\Requests\Admin\UpdateEmployer  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateArticle $request, $id)
+    public function update(UpdateEmployer $request, $id)
     {
-        $article = Article::find($id);
+        $employer = Employer::find($id);
 
         $data = $request->all();
 
-        $data['image'] = Article::updateImage($request, $article);
+        $data['image'] = Employer::updateImage($request, $employer);
+        $data['slug_de'] = Str::slug($request->title_de, '-', 'de');
+        $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
 
-        if($article->update($data)) 
+        if($employer->update($data)) 
         {
             return redirect()
-                   ->route('article.index')
+                   ->route('employer.index')
                    ->with("message", "Updated successfully!");
         }
+
         return redirect()
-               ->route('article.index')
+               ->route('employer.index')
                ->with("message", "Failed to updated successfully!");
 
     }
@@ -117,20 +122,20 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        $article = Article::find($id);
+        $employer = Employer::find($id);
 
-        if (File::exists(public_path() . $article->image)) {
-            File::delete(public_path() . $article->image);
+        if (File::exists(public_path() . $employer->image)) {
+            File::delete(public_path() . $employer->image);
         }
 
-        if ($article->delete()) {
+        if ($employer->delete()) {
             return redirect()
-                   ->route('article.index')
+                   ->route('employer.index')
                    ->with('message', "deleted successfully!");
         }
 
         return redirect()
-                ->route('article.index')
+                ->route('employer.index')
                 ->with('message', "failed to delete successfully!");
     }
 }
