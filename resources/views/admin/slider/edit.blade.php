@@ -34,6 +34,9 @@
                                     </div>
                                 @endif
                             </div>
+                            <div class="col-md-6">
+                                <img src="{{ asset($slider->image) }}" width="150" height="150" alt="">
+                            </div>
                             
                         </div>
                         <br>
