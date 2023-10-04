@@ -129,7 +129,6 @@
                          <li class="nav-item">
                             <a href="{{ route('category.index') }}" class="nav-link">
                             <i class="nav-icon fa-solid fa-arrow-down-wide-short"></i>
-                            {{-- <i class="fa-solid fa-arrow-down-wide-short"></i> --}}
                             <p>
                                 Categories
                             </p>
@@ -137,7 +136,17 @@
                           </li>
                         {{-- end --}}
 
-                        
+                        {{-- start --}}
+                        <li class="nav-item">
+                            <a href="{{ route('document.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-file-download"></i>
+                            <p>
+                                Documents
+                            </p>
+                            </a>
+                          </li>
+                        {{-- end --}}
+
 
                 </ul>
             </nav>
