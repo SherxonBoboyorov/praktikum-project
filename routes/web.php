@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\OptionsController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\ProtectionController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\IndexController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
@@ -52,6 +53,7 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){ 
          Route::get('/', [IndexController::class, 'homePage'])->name('/');
+         Route::get('about', [AboutController::class, 'about'])->name('about');
     });
 
 

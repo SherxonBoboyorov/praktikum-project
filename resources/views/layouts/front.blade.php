@@ -30,7 +30,7 @@
                 </div>
                 <ul class="nav__list">
                     <li>
-                        <a class="active" href="./index.html">Home</a>
+                        <a class="active" href="{{ route('/') }}">Home</a>
                     </li>
                     <li>
                         <a href="./src/pages/for-employers.html">For Employers</a>
@@ -39,7 +39,7 @@
                         <a href="./src/pages/for-applicants.html">For Applicants</a>
                     </li>
                     <li>
-                        <a href="./src/pages/about.html">About us</a>
+                        <a href="{{ route('about') }}">About us</a>
                     </li>
                     <li>
                         <a href="./src/pages/contacts.html">Contact</a>
@@ -114,7 +114,7 @@
                                 <a href="./src/pages/for-applicants.html">For Applicants</a>
                             </li>
                             <li>
-                                <a href="./src/pages/about.html">About us</a>
+                                <a href="{{ route('about') }}">About us</a>
                             </li>
                             <li>
                                 <a href="./src/pages/downloads.html">Downloads</a>
