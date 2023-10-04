@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\ImprintController;
 use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SliderController;
@@ -35,7 +36,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'download' => DownloadController::class,
         'category' => CategoryController::class,
         'document' => DocumentController::class,
-        'link' => LinkController::class
+        'link' => LinkController::class,
+        'imprint' => ImprintController::class
     ]);
 });
 

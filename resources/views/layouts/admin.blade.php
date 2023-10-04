@@ -159,6 +159,17 @@
                           </li>
                         {{-- end --}}
 
+                           {{-- start --}}
+                           <li class="nav-item">
+                            <a href="{{ route('imprint.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-link"></i>
+                            <p>
+                                Imprint
+                            </p>
+                            </a>
+                          </li>
+                        {{-- end --}}
+
 
                 </ul>
             </nav>

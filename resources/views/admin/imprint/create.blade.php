@@ -14,7 +14,7 @@
                 <div class="clearfix"></div>
             </div>
 
-            <form action="{{ route('page.store') }}" enctype="multipart/form-data" method="POST">
+            <form action="{{ route('imprint.store') }}" enctype="multipart/form-data" method="POST">
                 @csrf
                 <div class="card">
                     <div class="card-body">
