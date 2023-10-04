@@ -162,7 +162,7 @@
                            {{-- start --}}
                            <li class="nav-item">
                             <a href="{{ route('imprint.index') }}" class="nav-link">
-                            <i class="nav-icon fas fa-link"></i>
+                            <i class="nav-icon fas fa-print"></i>
                             <p>
                                 Imprint
                             </p>
