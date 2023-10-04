@@ -14,6 +14,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ImprintController;
 use App\Http\Controllers\Admin\LinkController;
+use App\Http\Controllers\Admin\OptionsController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\ProtectionController;
 use App\Http\Controllers\Admin\SliderController;
@@ -39,7 +40,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'document' => DocumentController::class,
         'link' => LinkController::class,
         'imprint' => ImprintController::class,
-        'protection' => ProtectionController::class
+        'protection' => ProtectionController::class,
+        'options' => OptionsController::class
     ]);
 });
 
