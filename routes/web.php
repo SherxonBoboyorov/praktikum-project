@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ApplicantController;
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\EmployerController;
 use App\Http\Controllers\Admin\FaqController;
 use Illuminate\Support\Facades\Auth;
@@ -26,7 +27,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'faq' => FaqController::class,
         'employer' => EmployerController::class,
         'applicant' => ApplicantController::class,
-        'page' => PageController::class
+        'page' => PageController::class,
+        'contact' => ContactController::class
     ]);
 });
 

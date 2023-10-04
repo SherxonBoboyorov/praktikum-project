@@ -11,9 +11,9 @@ class UpdateContact extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,17 @@ class UpdateContact extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            //
+            'title_de' => 'required|string|max:255',
+            'title_em' => 'required|string|max:255',
+            'job_de' => 'required|string|max:255',
+            'job_en' => 'required|string|max:255',
+            'content_de' => 'required',
+            'content_en' => 'required',
+            'email' => 'required|string|max:255',
+            'number' => 'required|string|max:55',
         ];
     }
 }

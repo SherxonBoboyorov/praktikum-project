@@ -102,6 +102,17 @@
                           </li>
                         {{-- end --}}
 
+                        {{-- start --}}
+                        <li class="nav-item">
+                            <a href="{{ route('contact.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-address-book"></i>
+                            <p>
+                                About Contacts
+                            </p>
+                            </a>
+                          </li>
+                        {{-- end --}}
+
                 </ul>
             </nav>
         </div>

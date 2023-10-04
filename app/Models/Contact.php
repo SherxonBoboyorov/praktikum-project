@@ -15,7 +15,7 @@ class Contact extends Model
     protected $fillable = [
         'image',
         'title_de',
-        'title_en',
+        'title_em',
         'job_de',
         'job_en',
         'content_de',

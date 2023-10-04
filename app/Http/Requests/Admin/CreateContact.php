@@ -11,9 +11,9 @@ class CreateContact extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,18 @@ class CreateContact extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            //
+            'image' => 'required|image|mimes:png,jpg,jpeg,wepb',
+            'title_de' => 'required|string|max:255',
+            'title_em' => 'required|string|max:255',
+            'job_de' => 'required|string|max:255',
+            'job_en' => 'required|string|max:255',
+            'content_de' => 'required',
+            'content_en' => 'required',
+            'email' => 'required|string|max:255',
+            'number' => 'required|string|max:55',
         ];
     }
 }
