@@ -170,6 +170,17 @@
                           </li>
                         {{-- end --}}
 
+                        {{-- staty --}}
+                        <li class="nav-item">
+                            <a href="{{ route('protection.index') }}" class="nav-link">
+                            <i class="nav-icon fa fa-shield"></i>
+                            <p>
+                                Data Protection 
+                            </p>
+                            </a>
+                          </li>
+                        {{-- end --}}
+
 
                 </ul>
             </nav>

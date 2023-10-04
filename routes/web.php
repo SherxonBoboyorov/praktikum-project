@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ImprintController;
 use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\ProtectionController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Front\IndexController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
@@ -37,7 +38,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'category' => CategoryController::class,
         'document' => DocumentController::class,
         'link' => LinkController::class,
-        'imprint' => ImprintController::class
+        'imprint' => ImprintController::class,
+        'protection' => ProtectionController::class
     ]);
 });
 
