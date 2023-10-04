@@ -148,6 +148,18 @@
                         {{-- end --}}
 
 
+                        {{-- start --}}
+                        <li class="nav-item">
+                            <a href="{{ route('link.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-link"></i>
+                            <p>
+                                Interesting links
+                            </p>
+                            </a>
+                          </li>
+                        {{-- end --}}
+
+
                 </ul>
             </nav>
         </div>

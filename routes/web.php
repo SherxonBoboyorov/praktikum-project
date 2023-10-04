@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SliderController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
@@ -32,7 +33,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'contact' => ContactController::class,
         'download' => DownloadController::class,
         'category' => CategoryController::class,
-        'document' => DocumentController::class
+        'document' => DocumentController::class,
+        'link' => LinkController::class
     ]);
 });
 
