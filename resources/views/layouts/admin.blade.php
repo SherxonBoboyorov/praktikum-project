@@ -52,7 +52,7 @@
                         <a href="{{ route('article.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-newspaper"></i>
                         <p>
-                            Article
+                            Articles
                         </p>
                         </a>
                       </li>
@@ -107,7 +107,7 @@
                             <a href="{{ route('contact.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-address-book"></i>
                             <p>
-                                About Contacts
+                                About Contact
                             </p>
                             </a>
                           </li>
@@ -119,11 +119,25 @@
                             <a href="{{ route('download.index') }}" class="nav-link">
                             <i class="nav-icon fas fa fa-download"></i>
                             <p>
-                                Downloads Content
+                                Downloads Contents
                             </p>
                             </a>
                           </li>
                         {{-- end --}}
+
+                         {{-- start --}}
+                         <li class="nav-item">
+                            <a href="{{ route('category.index') }}" class="nav-link">
+                            <i class="nav-icon fa-solid fa-arrow-down-wide-short"></i>
+                            {{-- <i class="fa-solid fa-arrow-down-wide-short"></i> --}}
+                            <p>
+                                Categories
+                            </p>
+                            </a>
+                          </li>
+                        {{-- end --}}
+
+                        
 
                 </ul>
             </nav>

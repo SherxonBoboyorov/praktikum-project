@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ApplicantController;
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DownloadController;
 use App\Http\Controllers\Admin\EmployerController;
@@ -28,7 +29,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'applicant' => ApplicantController::class,
         'page' => PageController::class,
         'contact' => ContactController::class,
-        'download' => DownloadController::class
+        'download' => DownloadController::class,
+        'category' => CategoryController::class
     ]);
 });
 
