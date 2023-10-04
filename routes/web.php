@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Front\IndexController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
 Auth::routes();
@@ -44,7 +45,7 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){ 
-         //
+         Route::get('/', [IndexController::class, 'homePage'])->name('/');
     });
 
 
