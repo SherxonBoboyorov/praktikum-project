@@ -112,6 +112,18 @@
                             </a>
                           </li>
                         {{-- end --}}
+                        
+
+                         {{-- start --}}
+                         <li class="nav-item">
+                            <a href="{{ route('download.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa fa-download"></i>
+                            <p>
+                                Downloads Content
+                            </p>
+                            </a>
+                          </li>
+                        {{-- end --}}
 
                 </ul>
             </nav>

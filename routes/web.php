@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ApplicantController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\DownloadController;
 use App\Http\Controllers\Admin\EmployerController;
 use App\Http\Controllers\Admin\FaqController;
 use Illuminate\Support\Facades\Auth;
@@ -12,8 +13,6 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SliderController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
-
-
 
 Auth::routes();
 
@@ -28,7 +27,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'employer' => EmployerController::class,
         'applicant' => ApplicantController::class,
         'page' => PageController::class,
-        'contact' => ContactController::class
+        'contact' => ContactController::class,
+        'download' => DownloadController::class
     ]);
 });
 
