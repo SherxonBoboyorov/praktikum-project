@@ -24,7 +24,7 @@
         <nav class="nav">
             <div class="container">
                 <div class="logo">
-                    <a href="./index.html">
+                    <a href="{{ route('/') }}">
                         <img src="{{ asset('front/src/images/main-logo.png') }}" alt="logo" width="157" height="54">
                     </a>
                 </div>
@@ -42,7 +42,7 @@
                         <a href="{{ route('about') }}">About us</a>
                     </li>
                     <li>
-                        <a href="./src/pages/contacts.html">Contact</a>
+                        <a href="{{ route('contact') }}">Contact</a>
                     </li>
                     <li>
                         <a href="./src/pages/downloads.html">DOWNLOADS</a>
@@ -63,39 +63,7 @@
                 </div>
             </div>
         </nav>
-        <section class="banner">
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="{{ asset('front/public/img/img1.web') }}p" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('front/public/img/img2.web') }}p" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('front/public/img/img3.jpg') }}" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('front/public/img/img4.jpg') }}" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('front/public/img/img5.jpg') }}" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('front/public/img/img6.jpg') }}" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('front/public/img/img7.jpg') }}" alt="">
-                    </div>
-                    ...
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
+       
     </header>
 
     @yield('content')

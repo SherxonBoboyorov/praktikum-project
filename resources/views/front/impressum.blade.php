@@ -1,107 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.front')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praktikum4People</title>
-    <!-- SWIPER SLIDER-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="../css/swiper.min.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/main.min.css">
-</head>
-
-<body>
-    <div class="loading">
-        <div class="loader"></div>
-    </div>
-    <header>
-        <nav class="nav">
-            <div class="container">
-                <div class="logo">
-                    <a href="../../index.html">
-                        <img src="../images/main-logo.png" alt="logo" width="157" height="54">
-                    </a>
-                </div>
-                <ul class="nav__list">
-                    <li>
-                        <a href="../../index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="./for-employers.html">For Employers</a>
-                    </li>
-                    <li>
-                        <a href="./for-applicants.html">For Applicants</a>
-                    </li>
-                    <li>
-                        <a href="./about.html">About us</a>
-                    </li>
-                    <li>
-                        <a href="./contacts.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="./downloads.html">DOWNLOADS</a>
-                    </li>
-                    <li>
-                        <a href="./partners.html">FAQ</a>
-                    </li>
-                    <li class="lang">
-                        <a href="">DE</a>
-                        <span class="lang__drop"> / </span>
-                        <a href="" class="active">EN</a>
-                    </li>
-                </ul>
-                <div class="bars">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
-            </div>
-        </nav>
-        <section class="banner">
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="../../public/img/img5.jpg" alt="">
+@section('content')
+    
+<section class="banner data-production-banner">
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide data-production-banner__slider">
+                <img src="{{ asset('front/public/img/contact-img.jpg') }}" alt="">
+                <div class="data-production-banner__info">
+                    <div class="container">
+                        <div class="inline-header-title">
+                            IMPRINT
+                        </div>
+                        <div class="inline-header-breadcrumb">
+                            <a href="{{ route('/') }}">Home</a>
+                            /
+                            <span> IMPRINT</span>
+                        </div>
                     </div>
-                    ...
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
             </div>
-        </section>
-    </header>
+            ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
 
     <main>
-        <section class="team-members news">
+        <section class="data-production-main">
             <div class="container">
-                <div class="vnutreny-banner-baton-element">
-                    <h1 class="title">NEWS</h1>
-                    <div class="container team-members__txt news__content">
-                        <div class="news__img">
-                            <img src="../../public/img/news-img.png" alt="">
-                        </div>
-                        <div class="news__info">
-                            <div class="aktuell-right-element-link news__info__time">
-                                <div class="time">10.09.22</div>
-                            </div>
-                            <h2 class="news__info__title">
-                                ADVANCED TRAINING
-                            </h2>
-                            <div class="news__info__desc">
-                                <p>Dear students, please pay attention to the following information: From this year on, we will also need the certificate of enrolment of your university translated into the German or English language fto apply for a work permit (internship and holiday work). In addition, please send the "Statement of the Certificate of enrolment". This form which is given out by the Federal Employment Agency can be found under Downloads on our homepage.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="data-production-main__content" data-aos="fade-up" data-aos-anchor-placement="top-bottom"  data-aos-duration="700">
+                    <p><strong>Imprint</strong></p>
+                    <p>Information under § 5 TMG</p>
+                    <p>Praktikum4People UG (haftungsbeschränkt)</p>
+                    <p>Hanfweg 4</p>
+                    <p>85302 Gerolsbach</p>
+                    <p>Germany</p>
+                    <p>Commercial Register: HRB 8840 Register-Court: Ingolstadt</p>
+                    <p><strong>Vat</strong></p>
+                    <p>VAT identification number in accordance with Section 27 (a) VAT Act:</p>
+                    <p>DE 124/135/42276</p>
+                    <p><strong>Proof of photos</strong></p>
+                    <p>All images are the property of Praktikum4People and may not be used for any other purpose.</p>
+                    <p class="source">
+                        <strong>Source:</strong>
+                    E-Recht24
+                    <a href="http://www.e-recht24.de/">www.e-recht24.de</a>
+                    </p>
+                    </p>
                 </div>
             </div>
         </section>
+
         <section class="contactus">
             <p class="contactus__text">
                 contact us
@@ -219,7 +173,7 @@
                 <div class="footer__sosgroup">
                     <p>© Copyright 2018 - Web developed by <a href="https://sos.uz/">SOS Group</a></p>
                 </div>
-                <ul class="footer__satsial">
+                <ul class="footer__satsial impressum-footer-icon-border">
                     <li>
                         <a href="https://www.facebook.com/Praktikum4People/?modal=admin_todo_tour">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="20" height="20"
@@ -257,7 +211,11 @@
             </div>
         </div>
     </footer>
-
+<!-- AOS ANIMATION -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
     <!-- SWIPER SLIDER-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/swiper.js"></script>

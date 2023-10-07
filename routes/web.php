@@ -54,6 +54,7 @@ Route::group(
     ], function(){ 
          Route::get('/', [IndexController::class, 'homePage'])->name('/');
          Route::get('about', [AboutController::class, 'about'])->name('about');
+         Route::get('contact', [ContactController::class, 'contact'])->name('contact');
     });
 
 
