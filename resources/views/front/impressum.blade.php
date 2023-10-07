@@ -106,4 +106,4 @@
 
     </main>
 
-   @endsections
+   @endsection
