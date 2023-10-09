@@ -43,76 +43,18 @@
                 <div class="vnutreny-banner-baton-element">
                     <h1 class="title">OUR PROGRAMS FOR APPLICANTS</h1>
                     <div class="content">
+                      @foreach ($applicants as $applicant)
                         <div class="content__item" data-aos="fade-up" data-aos-duration="500">
-                            <a href="./products.html">
+                            <a href="{{ route('show.for-applicant', $) }}">
                                 <div class="content__card card">
                                     <div class="img">
-                                        <img src="../../public/img/our-prog-1.jpg" alt="">
+                                        <img src="{{ asset($applicant->image) }}" alt="">
                                     </div>
-                                    <h3 class="desc">INTERNSHIP</h3>
+                                    <h3 class="desc">{{ $applicant->{'title_' . app()->getLocale()} }}</h3>
                                 </div>
                             </a>
-                        </div>
-                        <div class="content__item" data-aos="fade-up" data-aos-duration="600">
-                            <a href="./products.html">
-                                <div class="content__card">
-                                    <div class="img">
-                                        <img src="../../public/img/our-prog-2.jpg" alt="">
-                                    </div>
-                                    <h3 class="desc">HOLIDAY WORK</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="content__item" data-aos="fade-up" data-aos-duration="700">
-                            <a href="./products.html">
-                                <div class="content__card">
-                                    <div class="img">
-                                        <img src="../../public/img/our-prog-3.webp" alt="">
-                                    </div>
-                                    <h3 class="desc">APPRENTICESHIP </h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="content__item" data-aos="fade-up" data-aos-duration="800">
-                            <a href="./products.html">
-                                <div class="content__card">
-                                    <div class="img">
-                                        <img src="../../public/img/our-prog-4.jpg" alt="">
-                                    </div>
-                                    <h3 class="desc">SKILLED LABOUR </h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="content__item" data-aos="fade-up" data-aos-duration="600">
-                            <a href="./products.html">
-                                <div class="content__card">
-                                    <div class="img">
-                                        <img src="../../public/img/img6.jpg" alt="">
-                                    </div>
-                                    <h3 class="desc">STUDY IN GERMANY</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="content__item" data-aos="fade-up" data-aos-duration="700">
-                            <a href="./products.html">
-                                <div class="content__card">
-                                    <div class="img">
-                                        <img src="../../public/img/our-prog-5.jpg" alt="">
-                                    </div>
-                                    <h3 class="desc">Advanced Training</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="content__item" data-aos="fade-up" data-aos-duration="800">
-                            <a href="./products.html">
-                                <div class="content__card">
-                                    <div class="img">
-                                        <img src="../../public/img/our-prog-6.jpg" alt="">
-                                    </div>
-                                    <h3 class="desc">VOLUNTARY SOCIAL YEAR </h3>
-                                </div>
-                            </a>
-                        </div>
+                         </div>
+                       @endforeach
                     </div>
                 </div>
             </div>

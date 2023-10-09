@@ -48,10 +48,7 @@
                                 </div>
                                 <div class="products__text">
                                     <ul>
-                                        <li>Our applicants are foreign students who want to earn money for their studies during the summer semester break.</li>
-                                        <li>They support you wherever there is a need, e.g. as a harvest helper in agriculture, as a waiter, kitchen help or in housekeeping in the catering and hotel industry, as an assembly line worker in industry or as cleaning staff in industrial cleaning.</li>
-                                        <li>The maximum duration of employment is 90 days per year from May to October.</li>
-                                        <li>Communication in German or English is ensured.</li>
+                                    <li>{!! $employer->{'applicants_' . app()->getLocale()} !!}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -63,12 +60,7 @@
                                 </div>
                                 <div class="products__text">
                                     <ul>
-                                        <li>We will introduce you to suitable students with their individual CV.</li>
-                                        <li>We prepare the necessary application documents for the work permit on your behalf and submit the application to the ZAV.</li>
-                                        <li>We provide an individual health, liability and accident insurance (Dr-Walter).</li>
-                                        <li>We help the students to apply for the visa.</li>
-                                        <li>We organize the arrival at your company.</li>
-                                        <li>We are available to provide advice throughout the entire period.</li>
+                                        <li>{!! $employer->{'services_' . app()->getLocale()} !!}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -80,12 +72,7 @@
                                 </div>
                                 <div class="products__text">
                                     <ul>
-                                        <li>The students receive minimum wage and are available for 90 days for at least 40 hours / week.</li>
-                                        <li>TThe employer provides accommodation, cooking facilities and work clothes. The costs can be deducted from the wages.</li>
-                                        <li>The holiday work is free of social security contributions, only income tax (tax class 1) has to be paid by the student.</li>
-                                        <li>Students are not required to register with the registration office (Einwohnermeldeamt).</li>
-                                        <li>The students have to pay for their travel expenses themselves</li>
-                                        <li>Praktikum4People receives a monthly administration fee of 80 euros for the duration of their employment.</li>
+                                        <li>{!! $employer->{'conditions_' . app()->getLocale()} !!}</li>
                                     </ul>
                                 </div>
                             </div>

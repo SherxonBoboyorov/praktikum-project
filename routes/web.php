@@ -19,8 +19,10 @@ use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\ProtectionController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\ApplicantsController;
 use App\Http\Controllers\Front\EmployersController;
 use App\Http\Controllers\Front\IndexController;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
 Auth::routes();
@@ -51,7 +53,7 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ], function(){ 
          Route::get('/', [IndexController::class, 'homePage'])->name('/');
          Route::get('about', [AboutController::class, 'about'])->name('about');
@@ -59,7 +61,9 @@ Route::group(
          Route::get('articles/{id}', [IndexController::class, 'show'])->name('article');
          Route::get('contact', [ContactController::class, 'contact'])->name('contact');
          Route::get('for-employers', [EmployersController::class, 'list'])->name('for-employers');
-         Route::get('for-employers/{id}', [EmployersController::class, 'show'])->name('for-employer');
+         Route::get('for-employers/{slug?}', [EmployersController::class, 'show'])->name('show.for-employer');
+         Route::get('for-applicants', [ApplicantsController::class, 'list'])->name('for-applicants');
+         Route::get('for-applicants/{slug?}', [ApplicantsController::class, 'show'])->name('show.for-applicant');
     });
 
 

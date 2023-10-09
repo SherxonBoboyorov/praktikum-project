@@ -68,6 +68,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="aktuell">
                     <h1 class="title">News</h1>
                     <div class="aktuell__content">

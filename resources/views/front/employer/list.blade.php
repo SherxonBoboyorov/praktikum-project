@@ -40,16 +40,16 @@
         <section class="vnutreny-banner-baton">
             <div class="container">
                 <div class="vnutreny-banner-baton-element">
-                    <h1 class="title">OUR PROGRAMS FOR EMPLOYERS</h1>
+                  <h1 class="title">OUR PROGRAMS FOR EMPLOYERS</h1>
                     <div class="content">
-                        @foreach ($employers as $employer)  
+                      @foreach ($employers as $employer)  
                         <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="100">
-                            <a href="{{ route('for-employers', $employer->id) }}">
+                            <a href="{{ route('show.for-employer', $employer->{'slug_' . app()->getLocale()}) }}">
                                 <div class="content__card card">
                                     <div class="img">
                                         <img src="{{ asset($employer->image) }}" alt="">
+                                        <h3 class="desc">{{ $employer->{'title_' . app()->getLocale()} }}</h3>
                                     </div>
-                                    <h3 class="desc">{{ $employer->{'title_' . app()->getLocale()} }}</h3>
                                 </div>
                             </a>
                         </div>

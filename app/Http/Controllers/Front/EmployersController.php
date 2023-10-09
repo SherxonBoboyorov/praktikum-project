@@ -10,15 +10,17 @@ class EmployersController extends Controller
 {
     public function list()
     {
-        $employers = Employer::orderBy('id')->get();
+        $employers = Employer::orderBy('created_at', 'DESC')->get();
         return view('front.employer.list', compact(
             'employers'
         ));
     }
 
-    public function show($id) 
+    public function show($slug) 
     {
-        $employer = Employer::find($id);
+        $employer = Employer::where('slug_de', $slug)
+              ->orWhere('slug_en', $slug)
+              ->first();
         return view('front.employer.show', compact(
             'employer'
         ));
