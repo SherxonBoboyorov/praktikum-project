@@ -2,35 +2,34 @@
 
 @section('content')
 
-    <section class="banner">
-        <!-- Slider main container -->
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img src="{{ asset('front/public/img/img5.jpg') }}" alt="">
-                </div>
-                ...
+<section class="banner">
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="{{ asset('front/public/img/img5.jpg') }}" alt="">
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            ...
         </div>
-    </section>
-
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+    
 <main>
     <section class="team-members">
         <div class="container">
             <div class="vnutreny-banner-baton-element" data-aos="flip-down" data-aos-duration="1200" data-aos-easing="ease-in-back">
                 <h1 class="title">ABOUT US</h1>
-                @foreach ($pages as $page)
+                @foreach ($abouts as $page)
                 <div class="container team-members__txt">
-                    {!! $page->{'content_' . app()->getLocale()} !!}
+                        {!! $page->{'content_de' . app()->getLocale()} !!}
                 </div>
                 @endforeach
 
                 @foreach ($contacts as $contact)
-                    
                 <div class="team-members__member-item">
                     <div class="img">
                         <img src="{{ asset($contact->image) }}" alt="">

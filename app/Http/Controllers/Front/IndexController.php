@@ -19,4 +19,21 @@ class IndexController extends Controller
             'articles'
         ));
     }
+
+    public function list()
+    {
+        $articles = Article::orderBy('id')->get();
+        return view('front.index', compact(
+            'articles'
+        ));
+    }
+
+    public function show($id) 
+    {
+        $article = Article::find($id);
+
+        return view('front.news', compact(
+            'article'
+        ));
+    }
 }

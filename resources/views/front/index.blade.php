@@ -79,7 +79,7 @@
                                     <div class="aktuell-left-element-title">{{ $article->{'title_' . app()->getLocale()} }}</div>
                                     <div class="aktuell-left-element-text">{!! $article->{'content_' . app()->getLocale()} !!}</div>
                                     <div class="aktuell-left-element-link">
-                                        <a href="{{ route('articles', $article->id) }}" class="view-btn">
+                                        <a href="{{ route('article', $article->id) }}" class="view-btn">
                                             view
                                             <span></span>
                                             <span></span>

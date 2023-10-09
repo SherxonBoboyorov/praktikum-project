@@ -11,11 +11,11 @@ class AboutController extends Controller
 {
     public function about()
     {
-        $pages = Page::all();
+        $abouts = Page::orderBy('id')->get();
         $contacts = Contact::orderBy('created_at', 'DESC')->get();
 
         return view('front.about', compact(
-            'pages',
+            'abouts',
             'contacts'
         ));
     }

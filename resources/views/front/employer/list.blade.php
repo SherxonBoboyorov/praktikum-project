@@ -42,66 +42,18 @@
                 <div class="vnutreny-banner-baton-element">
                     <h1 class="title">OUR PROGRAMS FOR EMPLOYERS</h1>
                     <div class="content">
+                        @foreach ($employers as $employer)  
                         <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="100">
-                            <a href="./products.html">
+                            <a href="{{ route('for-employers', $employer->id) }}">
                                 <div class="content__card card">
                                     <div class="img">
-                                        <img src="../../public/img/our-prog-1.jpg" alt="">
+                                        <img src="{{ asset($employer->image) }}" alt="">
                                     </div>
-                                    <h3 class="desc">INTERNSHIP</h3>
+                                    <h3 class="desc">{{ $employer->{'title_' . app()->getLocale()} }}</h3>
                                 </div>
                             </a>
                         </div>
-                        <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="200">
-                            <a href="./products.html">
-                                <div class="content__card">
-                                    <div class="img">
-                                        <img src="../../public/img/our-prog-2.jpg" alt="">
-                                    </div>
-                                    <h3 class="desc">HOLIDAY WORK</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300">
-                            <a href="./products.html">
-                                <div class="content__card">
-                                    <div class="img">
-                                        <img src="../../public/img/our-prog-3.webp" alt="">
-                                    </div>
-                                    <h3 class="desc">APPRENTICESHIP </h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
-                            <a href="./products.html">
-                                <div class="content__card">
-                                    <div class="img">
-                                        <img src="../../public/img/our-prog-4.jpg" alt="">
-                                    </div>
-                                    <h3 class="desc">SKILLED LABOUR </h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
-                            <a href="./products.html">
-                                <div class="content__card">
-                                    <div class="img">
-                                        <img src="../../public/img/our-prog-5.jpg" alt="">
-                                    </div>
-                                    <h3 class="desc">Advanced Training</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
-                            <a href="./products.html">
-                                <div class="content__card">
-                                    <div class="img">
-                                        <img src="../../public/img/our-prog-6.jpg" alt="">
-                                    </div>
-                                    <h3 class="desc">VOLUNTARY SOCIAL YEAR </h3>
-                                </div>
-                            </a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

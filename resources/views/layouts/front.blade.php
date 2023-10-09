@@ -33,7 +33,7 @@
                         <a class="active" href="{{ route('/') }}">Home</a>
                     </li>
                     <li>
-                        <a href="./src/pages/for-employers.html">For Employers</a>
+                        <a href="{{ route('for-employers') }}">For Employers</a>
                     </li>
                     <li>
                         <a href="./src/pages/for-applicants.html">For Applicants</a>
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </nav>
-       
+
     </header>
 
     @yield('content')
@@ -76,7 +76,7 @@
                     <div class="footer-top__item">
                         <ul class="footer-top-list">
                             <li>
-                                <a href="./src/pages/for-employers.html">For Employers</a>
+                                <a href="{{ route('for-employers') }}">For Employers</a>
                             </li>
                             <li>
                                 <a href="./src/pages/for-applicants.html">For Applicants</a>

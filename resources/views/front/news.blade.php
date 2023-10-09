@@ -9,7 +9,25 @@
         <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
+                <img src="{{ asset('front/public/img/img1.webp') }}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('front/public/img/img2.webp') }}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('front/public/img/img3.jpg') }}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('front/public/img/img4.jpg') }}" alt="">
+            </div>
+            <div class="swiper-slide">
                 <img src="{{ asset('front/public/img/img5.jpg') }}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('front/public/img/img6.jpg') }}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('front/public/img/img7.jpg') }}" alt="">
             </div>
             ...
         </div>
@@ -25,17 +43,19 @@
                     <h1 class="title">NEWS</h1>
                     <div class="container team-members__txt news__content">
                         <div class="news__img">
-                            <img src="{{ asset('front/public/img/news-img.png') }}" alt="">
+                            <img src="{{ asset($article->image) }}" alt="">
                         </div>
                         <div class="news__info">
                             <div class="aktuell-right-element-link news__info__time">
                                 <div class="time">10.09.22</div>
                             </div>
                             <h2 class="news__info__title">
-                                ADVANCED TRAINING
+                                {{ $article->{'title_' . app()->getLocale()} }}
                             </h2>
                             <div class="news__info__desc">
-                                <p>Dear students, please pay attention to the following information: From this year on, we will also need the certificate of enrolment of your university translated into the German or English language fto apply for a work permit (internship and holiday work). In addition, please send the "Statement of the Certificate of enrolment". This form which is given out by the Federal Employment Agency can be found under Downloads on our homepage.</p>
+                                <p>
+                                   {!! $article->{'content_' . app()->getLocale()} !!} 
+                                </p>
                             </div>
                         </div>
                     </div>

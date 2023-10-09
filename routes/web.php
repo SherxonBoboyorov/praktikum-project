@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\ProtectionController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\EmployersController;
 use App\Http\Controllers\Front\IndexController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
@@ -54,7 +55,11 @@ Route::group(
     ], function(){ 
          Route::get('/', [IndexController::class, 'homePage'])->name('/');
          Route::get('about', [AboutController::class, 'about'])->name('about');
+         Route::get('articles', [IndexController::class, 'list'])->name('articles');
+         Route::get('articles/{id}', [IndexController::class, 'show'])->name('article');
          Route::get('contact', [ContactController::class, 'contact'])->name('contact');
+         Route::get('for-employers', [EmployersController::class, 'list'])->name('for-employers');
+         Route::get('for-employers/{id}', [EmployersController::class, 'show'])->name('for-employer');
     });
 
 
