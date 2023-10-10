@@ -20,8 +20,11 @@ use App\Http\Controllers\Admin\ProtectionController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\ApplicantsController;
+use App\Http\Controllers\Front\DownloadsController;
 use App\Http\Controllers\Front\EmployersController;
+use App\Http\Controllers\Front\ImpressumController;
 use App\Http\Controllers\Front\IndexController;
+use App\Http\Controllers\Front\ProtectionsController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
@@ -64,6 +67,9 @@ Route::group(
          Route::get('for-employers/{slug?}', [EmployersController::class, 'show'])->name('show.for-employer');
          Route::get('for-applicants', [ApplicantsController::class, 'list'])->name('for-applicants');
          Route::get('for-applicants/{slug?}', [ApplicantsController::class, 'show'])->name('show.for-applicant');
+         Route::get('data-protection', [ProtectionsController::class, 'dataProtection'])->name('data-protection');
+         Route::get('impressum', [ImpressumController::class, 'impressum'])->name('impressum');
+         Route::get('downloads', [DownloadsController::class, 'downloads'])->name('downloads');
     });
 
 

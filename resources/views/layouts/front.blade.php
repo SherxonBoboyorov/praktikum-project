@@ -45,7 +45,7 @@
                         <a href="{{ route('contact') }}">Contact</a>
                     </li>
                     <li>
-                        <a href="./src/pages/downloads.html">DOWNLOADS</a>
+                        <a href="{{ route('downloads') }}">DOWNLOADS</a>
                     </li>
                     <li>
                         <a href="./src/pages/partners.html">FAQ</a>
@@ -85,7 +85,7 @@
                                 <a href="{{ route('about') }}">About us</a>
                             </li>
                             <li>
-                                <a href="./src/pages/downloads.html">Downloads</a>
+                                <a href="{{ route('downloads') }}">Downloads</a>
                             </li>
                             <li>
                                 <a href="./src/pages/partners.html">FAQ</a>
@@ -94,8 +94,9 @@
                     </div>
                     <div class="footer-top__item">
                         <ul class="footer-top-list">
-                            <li><a href="./src/pages/impressum.html">IMPRESSUM</a></li>
-                            <li><a href="./src/pages/data-protection.html">DATENSCHUTZ</a></li>
+                            <li><a href="{{ route('impressum') }}">IMPRESSUM</a></li>
+                            
+                            <li><a href="{{ route('data-protection') }}">DATENSCHUTZ</a></li>
                         </ul>
                     </div>
                     <div class="footer-top__item">

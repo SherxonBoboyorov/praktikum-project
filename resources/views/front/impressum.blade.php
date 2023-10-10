@@ -34,24 +34,11 @@
         <section class="data-production-main">
             <div class="container">
                 <div class="data-production-main__content" data-aos="fade-up" data-aos-anchor-placement="top-bottom"  data-aos-duration="700">
-                    <p><strong>Imprint</strong></p>
-                    <p>Information under § 5 TMG</p>
-                    <p>Praktikum4People UG (haftungsbeschränkt)</p>
-                    <p>Hanfweg 4</p>
-                    <p>85302 Gerolsbach</p>
-                    <p>Germany</p>
-                    <p>Commercial Register: HRB 8840 Register-Court: Ingolstadt</p>
-                    <p><strong>Vat</strong></p>
-                    <p>VAT identification number in accordance with Section 27 (a) VAT Act:</p>
-                    <p>DE 124/135/42276</p>
-                    <p><strong>Proof of photos</strong></p>
-                    <p>All images are the property of Praktikum4People and may not be used for any other purpose.</p>
-                    <p class="source">
-                        <strong>Source:</strong>
-                    E-Recht24
-                    <a href="http://www.e-recht24.de/">www.e-recht24.de</a>
+                    @foreach ($imprints as $imprint)
+                    <p>
+                        {!! $imprint->{'content_' . app()->getLocale()} !!}
                     </p>
-                    </p>
+                    @endforeach
                 </div>
             </div>
         </section>

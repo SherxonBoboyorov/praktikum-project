@@ -34,29 +34,11 @@
         <section class="data-production-main">
             <div class="container">
                 <div class="data-production-main__content" data-aos="fade-up" data-aos-anchor-placement="top-bottom"  data-aos-duration="700">
-                    <p>1. Privacy at a glance</p>
-                    <p><strong>General notes</strong></p>
-                    <p>The following notes give a simple overview of what happens to your personal data when you visit
-                        our website. Personal data is all data that can be used to identify you personally. Detailed
-                        information on data protection can be found in our privacy policy listed under this text.</p>
-                    <p><strong>Request by email, phone or fax</strong></p>
-                    <p>If you contact us by e-mail, telephone or fax, your request, including all the personal data
-                        (name, request), will be stored and processed with us for the purpose of processing your
-                        request. We will not share this data without your consent.</p>
-                    <p>This data is processed on the basis of Article 6 (1) bed. b GDPR, provided that your request is
-                        related to the fulfillment of a contract or is necessary to carry out pre-contractual measures.
-                        In all other cases, the processing is based on your consent (Article 6 (1) bed. a GDPR) and/or
-                        on our legitimate interests (Article 6 (1) bed. f GDPR), as we have a legitimate interest in the
-                        effective handling of the requests addressed to us.</p>
-                    <p>The data you send to us via contact requests will remain with us until you ask us to delete it,
-                        revoke your consent to store or the purpose of storing the data is omitted (e.g. after your
-                        request has been processed). Mandatory legal provisions – in particular legal retention periods
-                        – remain unaffected.</p>
-                    <p class="source">
-                        <strong>Source:</strong>
-                        E-Recht24
-                        <a href="http://www.e-recht24.de/">www.e-recht24.de</a>
+                    @foreach ($protections as $protection)  
+                    <p>
+                        {!! $protection->{'content_' . app()->getLocale()} !!}
                     </p>
+                    @endforeach
                 </div>
             </div>
         </section>
