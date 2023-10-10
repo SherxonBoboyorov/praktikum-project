@@ -48,7 +48,7 @@
                         <a href="{{ route('downloads') }}">DOWNLOADS</a>
                     </li>
                     <li>
-                        <a href="./src/pages/partners.html">FAQ</a>
+                        <a href="{{ route('partners') }}">FAQ</a>
                     </li>
                     <li class="lang">
                         <a href="">DE</a>
@@ -88,7 +88,7 @@
                                 <a href="{{ route('downloads') }}">Downloads</a>
                             </li>
                             <li>
-                                <a href="./src/pages/partners.html">FAQ</a>
+                                <a href="{{ route('partners') }}">FAQ</a>
                             </li>
                         </ul>
                     </div>
@@ -186,6 +186,8 @@
     <script src="{{ asset('front/src/js/swiper.js') }}"></script>
     <!-- JS -->
     <script src="{{ asset('front/src/js/main.js') }}"></script>
+    <script src="{{ asset('front/src/js/faq-list.js') }}"></script>
+    <script src="{{ asset('front/src/js/contact-form.js') }}"></script>
 </body>
 
 </html>
