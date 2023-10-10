@@ -26,100 +26,37 @@
                     <h1 class="title">DOWNLOADS</h1>
                     <div class="downloads-main">
                         <div class="downloads-main__txt">
-                            <p>Dear applicant, below you will find a selection of the documents with which you can apply
-                                to us, as well as some links to our programs with interesting background information.
+                            @foreach ($downloads as $download)
+                            <p>
+                                {!! $download->{'content_' . app()->getLocale()} !!}
                             </p>
                             <p>&nbsp;</p>
                             <div class="downloads-main__txt-item"></div>
+                            @endforeach
                         </div>
+
+                        @foreach($categories as $category)
                         <div class="downloads-main__txt">
-                            <p> CV in word </p>
+                            <p>{{ $category->{'title_' . app()->getLocale()} }}</p>
+                            @foreach ($category->documents as $document)
                             <div class="downloads-main__txt-item">
-                                German Version
-                                <a href="#">(Download)</a>
+                                {{ $document->{'title_' . app()->getLocale()} }}
+                                <a href="{{ asset($document->image) }}">(Download)</a>
                             </div>
-                            <div class="downloads-main__txt-item">
-                                English Version
-                                <a href="#">( Download )</a>
-                            </div>
+                            @endforeach
                         </div>
-                        <div class="downloads-main__txt">
-                            <p>Motivation letter in word </p>
-                            <div class="downloads-main__txt-item">
-                                German Version
-                                <a href="#">( Download )</a>
-                            </div>
-                            <div class="downloads-main__txt-item">
-                                English Version
-                                <a href="#">( Download )</a>
-                            </div>
-                        </div>
-                        <div class="downloads-main__txt">
-                            <p>Certificate of enrolment </p>
-                            <div class="downloads-main__txt-item">
-                                Certificate of Enrolment for Work and Trave
-                                <a href="#">( Download )</a>
-                            </div>
-                            <div class="downloads-main__txt-item">
-                                Certificate of Enrolment for Internship
-                                <a href="#">( Download )</a>
-                            </div>
-                        </div>
-                        <div class="downloads-main__txt">
-                            <p>Data consent </p>
-                            <div class="downloads-main__txt-item">
-                                German version
-                                <a href="#">( Download )</a>
-                            </div>
-                            <div class="downloads-main__txt-item">
-                                English version
-                                <a href="webpage.zip">( Download )</a>
-                            </div>
-                        </div>
+                        @endforeach
+
                         <div class="interesting-links">
                             <p class="interesting-links__title">Interesting links: </p>
                             <p>&nbsp;</p>
+                            @foreach ($links as $link)
                             <div class="interesting-links__link">
-                                <span>Internship: </span>
-                                <a
-                                    href="https://www.arbeitsagentur.de/unternehmen/arbeitskraefte/studienfachbezogene-praktika">https://www.arbeitsagentur.de/unternehmen/arbeitskraefte/studienfachbezogene-praktika&nbsp;</a>
-                            </div>
-                            <div class="interesting-links__link">
-                                <span>Holiday Work : </span>
-                                <a
-                                    href="https://www.arbeitsagentur.de/unternehmen/arbeitskraefte/auslaendische-studierende">https://www.arbeitsagentur.de/unternehmen/arbeitskraefte/auslaendische-studierende&nbsp;</a>
-                            </div>
-                            <div class="interesting-links__link">
-                                <span>Apprenticeship: </span>
-                                <a
-                                    href="https://www.anerkennung-in-deutschland.de/html/de/index.php">http://https://www.anerkennung-in-deutschland.de/html/de/index.php</a>
-                            </div>
-                            <div class="interesting-links__link">
-                                <span>Skilled Labour: </span>
-                                <a href="http://www.anerkennung-in-deutschland.de/html/de/index.php">
-                                    https://www.anerkennung-in-deutschland.de/html/de/index.php </a>
-                            </div>
-                            <div class="interesting-links__link">
-                                <span>Study in Germany: </span>
-                                <a href="http://www.uni-assist.de/"> https://www.uni-assist.de/&nbsp;</a>
-                                <a href="https://www.daad.de/de/">https://www.daad.de/de/</a>
-                                <a href="https://www.study-in-germany.de/de/">https://www.study-in-germany.de/de/ </a>
-                            </div>
-                            <div class="interesting-links__link">
-                                <span>Au-Pair: </span>
-                                <a href="https://www.arbeitsagentur.de/unternehmen/arbeitskraefte/au-pair">https://www.arbeitsagentur.de/unternehmen/arbeitskraefte/au-pair
+                                <span>{{ $link->{'title_' . app()->getLocale()} }}: </span>
+                                <a href="{{ $link->link }}">{{ $link->link }}
                                 </a>
                             </div>
-                            <div class="interesting-links__link">
-                                <span>Voluntary Social Year: </span>
-                                <a href="https://www.arbeitsagentur.de/bildung/zwischenzeit/freiwilligendienst-leisten">https://www.arbeitsagentur.de/bildung/zwischenzeit/freiwilligendienst-leisten
-                                </a>
-                            </div>
-                            <div class="interesting-links__link">
-                                <span>Learn German: </span>
-                                <a
-                                    href="http://www.make-it-in-germany.com/de/leben-in-deutschland/deutsch/online/">&nbsp;https://www.make-it-in-germany.com/de/leben-in-deutschland/deutsch/online/&nbsp;</a>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
