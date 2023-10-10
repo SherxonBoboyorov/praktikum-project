@@ -9,25 +9,7 @@
         <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img1.webp') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img2.webp') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img3.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img4.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img5.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img6.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img7.jpg') }}" alt="">
+                <img src="{{ asset($employer->image) }}" alt="">
             </div>
             ...
         </div>

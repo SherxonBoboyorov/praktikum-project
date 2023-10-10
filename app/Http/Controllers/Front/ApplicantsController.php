@@ -12,7 +12,7 @@ class ApplicantsController extends Controller
     {
         $applicants = Applicant::orderBy('created_at', 'DESC')->get();
 
-        return view('front.applicat.list', compact(
+        return view('front.applicant.list', compact(
             'applicants'
         ));
     } 
@@ -22,7 +22,7 @@ class ApplicantsController extends Controller
         $applicant = Applicant::where('slug_de', $slug)
               ->orWhere('slug_en', $slug)
               ->first();
-        return view('front.applicat.show', compact(
+        return view('front.applicant.show', compact(
             'applicant'
         ));
     }

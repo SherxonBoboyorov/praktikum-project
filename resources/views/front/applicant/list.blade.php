@@ -45,7 +45,7 @@
                     <div class="content">
                       @foreach ($applicants as $applicant)
                         <div class="content__item" data-aos="fade-up" data-aos-duration="500">
-                            <a href="{{ route('show.for-applicant', $) }}">
+                            <a href="{{ route('show.for-applicant', $applicant->{'slug_' . app()->getLocale()}) }}">
                                 <div class="content__card card">
                                     <div class="img">
                                         <img src="{{ asset($applicant->image) }}" alt="">

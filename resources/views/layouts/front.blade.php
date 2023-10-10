@@ -36,7 +36,7 @@
                         <a href="{{ route('for-employers') }}">For Employers</a>
                     </li>
                     <li>
-                        <a href="./src/pages/for-applicants.html">For Applicants</a>
+                        <a href="{{ route('for-applicants') }}">For Applicants</a>
                     </li>
                     <li>
                         <a href="{{ route('about') }}">About us</a>
@@ -79,7 +79,7 @@
                                 <a href="{{ route('for-employers') }}">For Employers</a>
                             </li>
                             <li>
-                                <a href="./src/pages/for-applicants.html">For Applicants</a>
+                                <a href="{{ route('for-applicants') }}">For Applicants</a>
                             </li>
                             <li>
                                 <a href="{{ route('about') }}">About us</a>
