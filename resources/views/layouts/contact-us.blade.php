@@ -1,8 +1,10 @@
 <section class="contactus">
     <p class="contactus__text">
-        contact us
+        @lang('main.contact_us')
         <span></span><span></span><span></span><span></span>
     </p>
+
+    @include('alert')
     <div class="overlay hidden"></div>
     <div class="sweet-modal">
         <div class="sweet-modal-content hidden">
@@ -13,33 +15,42 @@
                         fill="%23292c34" />
                 </svg>
             </div>
-            <h2 class="modal-feedback-title">Kontakt-formular </h2>
-            <p class="modal-feedback-desc">Bitte füllen Sie dieses Formular aus, damit wir mit Ihnen Kontakt
-                aufnehmen
-                können</p>
-            <form class='feedback' action="#">
+            <h2 class="modal-feedback-title">@lang('main.contact_form') </h2>
+            <p class="modal-feedback-desc">@lang('main.call')</p>
+
+            @if($errors->any())
+          <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li style="color: red">{{ $error }}</li>
+                @endforeach
+            </ul>
+          </div>
+          @endif
+            <form class='feedback' action="{{ route('contact-form.store') }}" method="POST">
+                {{ csrf_field() }}
                 <div class="modal-feedback-form-group">
-                    <label for="company">Unternehmen</label>
+                    <label for="company">@lang('main.pursue')</label>
                     <input type="text" name="company">
                 </div>
                 <div class="modal-feedback-form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" name="name">
+                    <label for="name">@lang('main.name') *</label>
+                    <input type="text" name="names">
                 </div>
                 <div class="modal-feedback-form-group">
-                    <label for="email">E-Mail *</label>
-                    <input type="email" name="email">
+                    <label for="email">@lang('main.email') *</label>
+                    <input type="email" name="gmail">
                 </div>
                 <div class="modal-feedback-form-group">
-                    <label for="phone">Telefon *</label>
-                    <input type="text" name="phone">
+                    <label for="phone">@lang('main.phone') *</label>
+                    <input type="text" name="numbers">
                 </div>
                 <div class="modal-feedback-form-group">
                     <label for="comment">Text</label>
-                    <textarea name="comment"></textarea>
+                    <textarea name="content"></textarea>
                 </div>
                 <div class="modal-feedback-batton">
-                    <button class="btn-hexagon" type="submit">absenden</button>
+                    <button class="btn-hexagon" type="submit">@lang('main.send')</button>
                 </div>
             </form>
         </div>

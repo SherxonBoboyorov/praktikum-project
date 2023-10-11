@@ -39,7 +39,7 @@
                 <div class="contact__right">
                     <form action="" class="contact-form">
                         <div class="contact-form__item">
-                            <label for="name">Name</label>
+                            <label for="name">@lang('main.name')</label>
                             <div class="input">
                                 <input type="text">
                             </div>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <div class="contact-form__item">
-                            <label for="company">Company</label>
+                            <label for="company">@lang('main.company')</label>
                             <div class="input">
                                 <input type="text">
                             </div>
@@ -69,7 +69,7 @@
                         </div>
                         <div class="contact-form__btn">
                             <button class="view-btn">
-                                Send message
+                                @lang('main.send_message')
                                 <span></span><span></span><span></span><span></span>
                             </button>
                         </div>

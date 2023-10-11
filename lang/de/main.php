@@ -24,7 +24,16 @@ return [
    'our_programs_for_employers' => 'UNSERE PROGRAMME FÜR ARBEITGEBER',
    'our_applicants' => 'UNSERE BEWERBER',
    'our_services' => 'UNSERE LEISTUNGEN',
-   'our_conditions' => 'UNSERE KONDITIONEN'
+   'our_conditions' => 'UNSERE KONDITIONEN',
+   'name' => 'Name',
+   'company' => 'Unternehmen',
+   'send_message' => 'NACHRICHT SENDEN',
+   'contact_form' => 'KONTAKT-FORMULAR', 
+   'call' => 'Bitte füllen Sie dieses Formular aus, damit wir mit Ihnen Kontakt aufnehmen können',
+   'pursue' => 'Unternehmen',
+   'send' => 'absenden',
+   'contact_us' => 'kontaktiere uns'
+   
 
 ]
 

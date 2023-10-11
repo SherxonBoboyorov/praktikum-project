@@ -24,8 +24,17 @@ return [
     'our_programs_for_employers' => 'OUR PROGRAMS FOR EMPLOYERS',
     'our_applicants' => 'OUR APPLICANTS',
     'our_services' => 'OUR SERVICES',
-    'our_conditions' => 'OUR CONDITIONS'
-]
+    'our_conditions' => 'OUR CONDITIONS',
+    'name' => 'Name',
+    'company' => 'Company',
+    'send_message' => 'SEND MESSAGE',
+    'contact_form' => 'Contact Form',
+    'call' => 'Please fill out this form so that we can contact you',
+    'pursue' => 'Pursue',
+    'send' => 'Send',
+    'contact_us' => 'contact us'
+
+];
 
 
 

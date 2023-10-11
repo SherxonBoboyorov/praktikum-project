@@ -23,6 +23,7 @@ use App\Http\Controllers\Front\ApplicantsController;
 use App\Http\Controllers\Front\DownloadsController;
 use App\Http\Controllers\Front\EmployersController;
 use App\Http\Controllers\Front\FaqsController;
+use App\Http\Controllers\Front\FeedbackController;
 use App\Http\Controllers\Front\ImpressumController;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\ProtectionsController;
@@ -72,6 +73,9 @@ Route::group(
          Route::get('impressum', [ImpressumController::class, 'impressum'])->name('impressum');
          Route::get('downloads', [DownloadsController::class, 'downloads'])->name('downloads');
          Route::get('partners', [FaqsController::class, 'partners'])->name('partners');
+
+        Route::post('/contact-form', FeedbackController::class)->name('contact-form.store');
+
     });
 
 
