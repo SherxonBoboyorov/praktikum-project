@@ -32,7 +32,8 @@ return [
     'call' => 'Please fill out this form so that we can contact you',
     'pursue' => 'Pursue',
     'send' => 'Send',
-    'contact_us' => 'contact us'
+    'contact_us' => 'contact us',
+    'enter_message_here' => 'Enter message here'
 
 ];
 

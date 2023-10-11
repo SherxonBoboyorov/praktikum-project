@@ -32,8 +32,8 @@ return [
    'call' => 'Bitte füllen Sie dieses Formular aus, damit wir mit Ihnen Kontakt aufnehmen können',
    'pursue' => 'Unternehmen',
    'send' => 'absenden',
-   'contact_us' => 'kontaktiere uns'
-   
+   'contact_us' => 'KONTAKTIEREN SIE UNS',
+   'enter_message_here' => 'Geben Sie hier eine Nachricht ein'
 
 ]
 

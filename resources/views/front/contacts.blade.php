@@ -77,7 +77,7 @@
                         </div>
                         <div class="contact-form__item contact-form__textarea">
                             <div class="input">
-                                <textarea name="content" id=""  rows="7" placeholder="Enter message here"></textarea>
+                                <textarea name="content" id=""  rows="7" placeholder="@lang('main.enter_message_here')"></textarea>
                             </div>
                         </div>
                         <div class="contact-form__btn">
