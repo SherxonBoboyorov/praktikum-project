@@ -30,7 +30,7 @@
                 </div>
                 <ul class="nav__list">
                     <li>
-                        <a class="active" href="{{ route('/') }}">@lang('main.home')</a>
+                        <a class="actvie" href="{{ route('/') }}">@lang('main.home')</a>
                     </li>
                     <li>
                         <a href="{{ route('for-employers') }}">@lang('main.for_employers')</a>

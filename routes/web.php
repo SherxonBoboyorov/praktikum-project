@@ -28,6 +28,7 @@ use App\Http\Controllers\Front\FeedbackController;
 use App\Http\Controllers\Front\ImpressumController;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\ProtectionsController;
+use Illuminate\Http\Request;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
