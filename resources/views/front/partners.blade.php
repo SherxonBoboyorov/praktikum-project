@@ -22,9 +22,9 @@
         <section class="team-members partners">
             <div class="container" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-back">
                 <div class="inline-header-breadcrumb sub-menu-2">
-                    <a href="{{ route('/') }}">Home </a>
+                    <a href="{{ route('/') }}">@lang('main.home') </a>
                     /
-                    <span> FAQ</span>
+                    <span> @lang('main.faq')</span>
                 </div>
                 <div class="member-item-wrap">
                     @foreach ($faqs as $faq)

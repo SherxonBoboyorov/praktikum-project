@@ -30,30 +30,32 @@
                 </div>
                 <ul class="nav__list">
                     <li>
-                        <a class="active" href="{{ route('/') }}">Home</a>
+                        <a class="active" href="{{ route('/') }}">@lang('main.home')</a>
                     </li>
                     <li>
-                        <a href="{{ route('for-employers') }}">For Employers</a>
+                        <a href="{{ route('for-employers') }}">@lang('main.for_employers')</a>
                     </li>
                     <li>
-                        <a href="{{ route('for-applicants') }}">For Applicants</a>
+                        <a href="{{ route('for-applicants') }}">@lang('main.for_applicants')</a>
                     </li>
                     <li>
-                        <a href="{{ route('about') }}">About us</a>
+                        <a href="{{ route('about') }}">@lang('main.about_us')</a>
                     </li>
                     <li>
-                        <a href="{{ route('contact') }}">Contact</a>
+                        <a href="{{ route('contact') }}">@lang('main.contact')</a>
                     </li>
                     <li>
-                        <a href="{{ route('downloads') }}">DOWNLOADS</a>
+                        <a href="{{ route('downloads') }}">@lang('main.download')</a>
                     </li>
                     <li>
-                        <a href="{{ route('partners') }}">FAQ</a>
+                        <a href="{{ route('partners') }}">@lang('main.faq')</a>
                     </li>
                     <li class="lang">
-                        <a href="">DE</a>
-                        <span class="lang__drop"> / </span>
-                        <a href="" class="active">EN</a>
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}" class="active{{ $properties['native'] }}">
+                           /{{ $properties['native'] }}
+                        </a>
+                        @endforeach
                     </li>
                 </ul>
                 <div class="bars">
@@ -76,50 +78,50 @@
                     <div class="footer-top__item">
                         <ul class="footer-top-list">
                             <li>
-                                <a href="{{ route('for-employers') }}">For Employers</a>
+                                <a href="{{ route('for-employers') }}">@lang('main.for_employers')</a>
                             </li>
                             <li>
-                                <a href="{{ route('for-applicants') }}">For Applicants</a>
+                                <a href="{{ route('for-applicants') }}">@lang('main.for_applicants')</a>
                             </li>
                             <li>
-                                <a href="{{ route('about') }}">About us</a>
+                                <a href="{{ route('about') }}">@lang('main.about_us')</a>
                             </li>
                             <li>
-                                <a href="{{ route('downloads') }}">Downloads</a>
+                                <a href="{{ route('downloads') }}">@lang('main.download')</a>
                             </li>
                             <li>
-                                <a href="{{ route('partners') }}">FAQ</a>
+                                <a href="{{ route('partners') }}">@lang('main.faq')</a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-top__item">
                         <ul class="footer-top-list">
-                            <li><a href="{{ route('impressum') }}">IMPRESSUM</a></li>
+                            <li><a href="{{ route('impressum') }}">@lang('main.impressum')</a></li>
                             
-                            <li><a href="{{ route('data-protection') }}">DATENSCHUTZ</a></li>
+                            <li><a href="{{ route('data-protection') }}">@lang('main.datemschutz')</a></li>
                         </ul>
                     </div>
                     <div class="footer-top__item">
                         <p class="footer-top-title">PRAKTIKUM4PEOPLE</p>
                         <ul class="footer-top-right-element">
                             <li>
-                                <span>Address:</span>
+                                <span>@lang('main.address'):</span>
                                 <a href="">Hanfweg 4, 85302 Gerolsbach, Deutschland</a>
                             </li>
                             <li>
-                                <span>Phone:</span>
+                                <span>@lang('main.phone'):</span>
                                 <a href="">0049 (0)8445 9298270</a>
                             </li>
                             <li>
-                                <span>Fax:</span>
+                                <span>@lang('main.fax'):</span>
                                 <a href="">0049 (0)8445 9298271</a>
                             </li>
                             <li>
-                                <span>Email:</span>
+                                <span>@lang('main.email'):</span>
                                 <a href="">info@praktikum4people.com</a>
                             </li>
                             <li>
-                                <span>Web:</span>
+                                <span>@lang('main.web'):</span>
                                 <a href="">www.praktikum4people.com</a>
                             </li>
                         </ul>
@@ -135,7 +137,7 @@
                     </a>
                 </div>
                 <div class="footer__sosgroup">
-                    <p>© Copyright 2018 - Web developed by <a href="https://sos.uz/">SOS Group</a></p>
+                    <p>© Copyright 2018 - @lang('main.web_developed_by') <a href="https://sos.uz/">SOS Group</a></p>
                 </div>
                 <ul class="footer__satsial">
                     <li>

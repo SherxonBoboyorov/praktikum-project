@@ -8,27 +8,11 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
+            @foreach($sliders as $slider)
             <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img1.web') }}p" alt="">
+                <img src="{{ asset($slider->image) }}" alt="">
             </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img2.web') }}p" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img3.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img4.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img5.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img6.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img7.jpg') }}" alt="">
-            </div>
+            @endforeach
             ...
         </div>
         <!-- If we need pagination -->
@@ -40,7 +24,7 @@
         <section class="vnutreny-banner-baton">
             <div class="container">
                 <div class="vnutreny-banner-baton-element">
-                  <h1 class="title">OUR PROGRAMS FOR EMPLOYERS</h1>
+                  <h1 class="title">@lang('main.our_programs_for_employers')</h1>
                     <div class="content">
                       @foreach ($employers as $employer)  
                         <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="100">

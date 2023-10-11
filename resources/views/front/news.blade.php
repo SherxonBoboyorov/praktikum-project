@@ -40,7 +40,7 @@
         <section class="team-members news">
             <div class="container">
                 <div class="vnutreny-banner-baton-element">
-                    <h1 class="title">NEWS</h1>
+                    <h1 class="title">@lang('main.news')</h1>
                     <div class="container team-members__txt news__content">
                         <div class="news__img">
                             <img src="{{ asset($article->image) }}" alt="">

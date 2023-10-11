@@ -23,7 +23,7 @@
         <section class="downloads">
             <div class="container">
                 <div class="downloads__el vnutreny-banner-baton-element" data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-back">
-                    <h1 class="title">DOWNLOADS</h1>
+                    <h1 class="title">@lang('main.download')</h1>
                     <div class="downloads-main">
                         <div class="downloads-main__txt">
                             @foreach ($downloads as $download)
@@ -41,14 +41,14 @@
                             @foreach ($category->documents as $document)
                             <div class="downloads-main__txt-item">
                                 {{ $document->{'title_' . app()->getLocale()} }}
-                                <a href="{{ asset($document->image) }}">(Download)</a>
+                                <a href="{{ asset($document->image) }}">(@lang('main.download'))</a>
                             </div>
                             @endforeach
                         </div>
                         @endforeach
 
                         <div class="interesting-links">
-                            <p class="interesting-links__title">Interesting links: </p>
+                            <p class="interesting-links__title">@lang('main.interesting_links'): </p>
                             <p>&nbsp;</p>
                             @foreach ($links as $link)
                             <div class="interesting-links__link">

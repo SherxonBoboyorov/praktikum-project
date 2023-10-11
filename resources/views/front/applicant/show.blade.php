@@ -26,7 +26,7 @@
                         <div class="content__item">
                             <div class="products__card">
                                 <div class="products__title">
-                                    <span>OUR APPLICANTS</span>
+                                    <span>@lang('main.our_applicants')</span>
                                 </div>
                                 <div class="products__text">
                                     <ul>
@@ -38,7 +38,7 @@
                         <div class="content__item">
                             <div class="products__card">
                                 <div class="products__title">
-                                    <span>OUR SERVICES</span>
+                                    <span>@lang('main.our_services')</span>
                                 </div>
                                 <div class="products__text">
                                     <ul>
@@ -50,7 +50,7 @@
                         <div class="content__item">
                             <div class="products__card">
                                 <div class="products__title">
-                                    <span>OUR CONDITIONS</span>
+                                    <span>@lang('main.our_conditions')</span>
                                 </div>
                                 <div class="products__text">
                                     <ul>

@@ -22,17 +22,17 @@
             <div class="container" data-aos="flip-right" data-aos-duration="1200" data-aos-easing="ease-in-back">
                 <div class="contact__left">
                     <div class="info">
-                        <h4>Address:</h4>
+                        <h4>@lang('main.address'):</h4>
                         <p>Hanfweg 4, 85302 Gerolsbach, Germany
                         </p>
                     </div>
                     <div class="info">
-                        <h4>Phone:</h4>
+                        <h4>@lang('main.phone'):</h4>
                         <a href="#">0049 (0)8445 9298270</a>
                         <a href="#">0049 (0)8445 9298271</a>
                     </div>
                     <div class="info">
-                        <h4>Email:</h4>
+                        <h4>@lang('main.email'):</h4>
                         <a href="#">info@praktikum4people.com</a>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="contact-form__item">
-                            <label for="email">Email</label>
+                            <label for="email">@lang('main.email')</label>
                             <div class="input">
                                 <input type="text">
                             </div>
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                         <div class="contact-form__item">
-                            <label for="phone">Phone</label>
+                            <label for="phone">@lang('main.phone')</label>
                             <div class="input">
                                 <input type="text">
                             </div>

@@ -13,12 +13,12 @@
                 <div class="data-production-banner__info">
                     <div class="container">
                         <div class="inline-header-title">
-                            DATA PROTECTION
+                            @lang('main.datemschutz')
                         </div>
                         <div class="inline-header-breadcrumb">
-                            <a href="{{ route('/') }}">Home</a>
+                            <a href="{{ route('/') }}">@lang('main.home')</a>
                             /
-                            <span> DATA-PROTECTION</span>
+                            <span> @lang('main.datemschutz')</span>
                         </div>
                     </div>
                 </div>

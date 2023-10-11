@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Applicant;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class ApplicantsController extends Controller
@@ -11,9 +12,11 @@ class ApplicantsController extends Controller
     public function list()
     {
         $applicants = Applicant::orderBy('created_at', 'DESC')->get();
+        $sliders = Slider::orderBy('id')->get();
 
         return view('front.applicant.list', compact(
-            'applicants'
+            'applicants',
+            'sliders'
         ));
     } 
 

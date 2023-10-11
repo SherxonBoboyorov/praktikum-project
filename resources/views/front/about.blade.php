@@ -22,7 +22,7 @@
     <section class="team-members">
         <div class="container">
             <div class="vnutreny-banner-baton-element" data-aos="flip-down" data-aos-duration="1200" data-aos-easing="ease-in-back">
-                <h1 class="title">ABOUT US</h1>
+                <h1 class="title">@lang('main.about_us')</h1>
                 @foreach ($pages as $page)
                 <div class="container team-members__txt">
                         {!! $page->{'content_' . app()->getLocale()} !!}

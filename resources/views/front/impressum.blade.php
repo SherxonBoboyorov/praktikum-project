@@ -13,12 +13,12 @@
                 <div class="data-production-banner__info">
                     <div class="container">
                         <div class="inline-header-title">
-                            IMPRINT
+                            @lang('main.impressum')
                         </div>
                         <div class="inline-header-breadcrumb">
-                            <a href="{{ route('/') }}">Home</a>
+                            <a href="{{ route('/') }}">@lang('main.home')</a>
                             /
-                            <span> IMPRINT</span>
+                            <span> @lang('main.impressum')</span>
                         </div>
                     </div>
                 </div>
