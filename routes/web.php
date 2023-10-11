@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\ProtectionController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\ApplicantsController;
+use App\Http\Controllers\Front\ContactsController;
 use App\Http\Controllers\Front\DownloadsController;
 use App\Http\Controllers\Front\EmployersController;
 use App\Http\Controllers\Front\FaqsController;
@@ -64,7 +65,7 @@ Route::group(
          Route::get('about', [AboutController::class, 'about'])->name('about');
          Route::get('articles', [IndexController::class, 'list'])->name('articles');
          Route::get('articles/{id}', [IndexController::class, 'show'])->name('article');
-         Route::get('contact', [ContactController::class, 'contact'])->name('contact');
+         Route::get('contact', [ContactsController::class, 'contact'])->name('contact');
          Route::get('for-employers', [EmployersController::class, 'list'])->name('for-employers');
          Route::get('for-employers/{slug?}', [EmployersController::class, 'show'])->name('show.for-employer');
          Route::get('for-applicants', [ApplicantsController::class, 'list'])->name('for-applicants');
