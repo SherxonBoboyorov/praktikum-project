@@ -17,7 +17,7 @@ class FeedbackController extends Controller
 
         $contactFeedback = Callback::create($data);
 
-        Mail::to('sherxonbabayar@gmail.com')->send(new ContactMail($contactFeedback));
+        Mail::to('formular@praktikum4people.com')->send(new ContactMail($contactFeedback));
 
         return back()->with('message', 'Success');
     } 
