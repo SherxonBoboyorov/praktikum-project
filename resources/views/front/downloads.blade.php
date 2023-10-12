@@ -41,7 +41,7 @@
                             @foreach ($category->documents as $document)
                             <div class="downloads-main__txt-item">
                                 {{ $document->{'title_' . app()->getLocale()} }}
-                                <a href="{{ asset($document->image) }}">(@lang('main.download'))</a>
+                                <a href="{{ asset($document->image) }}">(@lang('main.downloads'))</a>
                             </div>
                             @endforeach
                         </div>

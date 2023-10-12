@@ -8,6 +8,7 @@ return [
    'about_us' => 'ÜBER UNS',
    'contact' => 'KONTAKT',
    'download' => 'DOWNLOADS',
+   'downloads' => 'Downloads',
    'faq' => 'FAQ',
    'impressum' => 'IMPRESSUM',
    'datemschutz' => 'DATENSCHUTZ',
