@@ -30,25 +30,25 @@
                 </div>
                 <ul class="nav__list">
                     <li>
-                        <a class="actvie" href="{{ route('/') }}">@lang('main.home')</a>
+                        <a class="{{ (\Request::route()->getName() == '/') ? 'active' : '' }}" href="{{ route('/') }}">@lang('main.home')</a>
                     </li>
                     <li>
-                        <a href="{{ route('for-employers') }}">@lang('main.for_employers')</a>
+                        <a class="{{ (\Request::route()->getName() == 'for-employers') ? 'active' : '' }}" href="{{ route('for-employers') }}">@lang('main.for_employers')</a>
                     </li>
                     <li>
-                        <a href="{{ route('for-applicants') }}">@lang('main.for_applicants')</a>
+                        <a class="{{ (\Request::route()->getName() == 'for-applicants') ? 'active' : '' }}" href="{{ route('for-applicants') }}">@lang('main.for_applicants')</a>
                     </li>
                     <li>
-                        <a href="{{ route('about') }}">@lang('main.about_us')</a>
+                        <a class="{{ (\Request::route()->getName() == 'about') ? 'active' : '' }}" href="{{ route('about') }}">@lang('main.about_us')</a>
                     </li>
                     <li>
-                        <a href="{{ route('contact') }}">@lang('main.contact')</a>
+                        <a class="{{ (\Request::route()->getName() == 'contact') ? 'active' : '' }}" href="{{ route('contact') }}">@lang('main.contact')</a>
                     </li>
                     <li>
-                        <a href="{{ route('downloads') }}">@lang('main.download')</a>
+                        <a class="{{ (\Request::route()->getName() == 'downloads') ? 'active' : '' }}" href="{{ route('downloads') }}">@lang('main.download')</a>
                     </li>
                     <li>
-                        <a href="{{ route('partners') }}">@lang('main.faq')</a>
+                        <a class="{{ (\Request::route()->getName() == 'partners') ? 'active' : '' }}" href="{{ route('partners') }}">@lang('main.faq')</a>
                     </li>
                     <li class="lang">
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -77,19 +77,19 @@
                     <div class="footer-top__item">
                         <ul class="footer-top-list">
                             <li>
-                                <a href="{{ route('for-employers') }}">@lang('main.for_employers')</a>
+                                <a class="{{ (\Request::route()->getName() == 'for-employers') ? 'active' : '' }}" href="{{ route('for-employers') }}">@lang('main.for_employers')</a>
                             </li>
                             <li>
-                                <a href="{{ route('for-applicants') }}">@lang('main.for_applicants')</a>
+                                <a class="{{ (\Request::route()->getName() == 'for-applicants') ? 'active' : '' }}" href="{{ route('for-applicants') }}">@lang('main.for_applicants')</a>
                             </li>
                             <li>
-                                <a href="{{ route('about') }}">@lang('main.about_us')</a>
+                                <a class="{{ (\Request::route()->getName() == 'about') ? 'active' : '' }}" href="{{ route('about') }}">@lang('main.about_us')</a>
                             </li>
                             <li>
-                                <a href="{{ route('downloads') }}">@lang('main.download')</a>
+                                <a class="{{ (\Request::route()->getName() == 'downloads') ? 'active' : '' }}" href="{{ route('downloads') }}">@lang('main.download')</a>
                             </li>
                             <li>
-                                <a href="{{ route('partners') }}">@lang('main.faq')</a>
+                                <a class="{{ (\Request::route()->getName() == 'partners') ? 'active' : '' }}" href="{{ route('partners') }}">@lang('main.faq')</a>
                             </li>
                         </ul>
                     </div>
