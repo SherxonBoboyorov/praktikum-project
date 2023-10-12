@@ -50,13 +50,13 @@
                     <li>
                         <a class="{{ (\Request::route()->getName() == 'partners') ? 'active' : '' }}" href="{{ route('partners') }}">@lang('main.faq')</a>
                     </li>
-                    <li class="lang">
+                    {{-- <li class="lang"> --}}
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}" class="active{{ $properties['native'] }}">
-                           /{{ $properties['native'] }}
+                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}" class="{{ $properties['native'] }} active" style="margin-left: 10px">
+                           {{ $properties['native'] }}
                         </a>
                         @endforeach
-                    </li>
+                    {{-- </li> --}}
                 </ul>
                 <div class="bars">
                     <div class="bar1"></div>
