@@ -8,27 +8,11 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
+            @foreach(\App\Models\Slider::orderBy('id')->get() as $item)
             <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img1.webp') }}" alt="">
+                <img src="{{ asset($item->image) }}" alt="">
             </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img2.webp') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img3.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img4.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img5.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img6.jpg') }}" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('front/public/img/img7.jpg') }}" alt="">
-            </div>
+            @endforeach
             ...
         </div>
         <!-- If we need pagination -->
